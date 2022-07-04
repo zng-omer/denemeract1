@@ -1,41 +1,29 @@
-import {  useEffect, useState } from 'react';
+import {  useEffect, useState } from 'react';function Appt (){
+
+            const [name,setName] = useState(()=>{
+              const saved = localStorage.getItem("name");
+              const initialValu = JSON.parse(saved);
+              return initialValu || "";
+            }
+          );
+
+          useEffect ( () =>{
+              localStorage.setItem("name",JSON.stringify(name));
+          },[name]);
+          return(
+            <form class="row g-3">
+              <div class="col-auto">
+                <label for="staticEmail2" class="visually-hidden">Name:</label>
+                <input type="text"  class="form-control-plaintext" placeholder="fullname" onChange={(e)=>setName(e.target.value)} id="staticEmail2" value={name}></input>
+              </div>
 
 
-
-
-function Appt (){
-
-         const [name ,setName] = useState( ()=>{
-            const saved = localStorage.getItem("name");
-            const initialValue = JSON.parse(saved);
-            return initialValue || 0;
-         }) 
-         
-        
-        useEffect ( () =>{
-          localStorage.setItem("name",JSON.stringify);
-        },[name]);
-
-        const handclick1 =()=>{
-          setName = setName +1;
-        }
-        const handclick2 =()=>{
-          setName = setName -1;
-        }
-
-        return(
-
-
-          
-          <form class="row g-3">
-        
-          <div class="col-auto">
-               <button type="submit" class="btn btn-primary mb-3" onClick={handclick1}>incrise</button>
-               <button type="submit" class="btn btn-primary mb-3" onClick={handclick2}>descrisi</button>
-
-          </div>
-    </form>
-        ); 
+                  <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+                  </div>
+              
+            </form>
+          ); 
 
 }
 
