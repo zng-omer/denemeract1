@@ -1,7 +1,7 @@
-const Appo = () => {
+function Appo () {
       return(
         <div>
-            <h1>Hello my freind0pppppppppppppoooooooooooooo</h1>
+            <h1>Hello my freind0ppppppvlbkvkbvkvbkvbkvkvbbooooooooooooo</h1>
         </div>
       );
 };

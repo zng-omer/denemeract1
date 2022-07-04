@@ -8,7 +8,7 @@ import Layout from "./layout";
 
 
 
-const App = () => {
+function App () {
       return (
             <BrowserRouter>
                   <Routes>
@@ -20,6 +20,6 @@ const App = () => {
                      
                   </Routes>
             </BrowserRouter>
-      )
+      );
 };
 export default App; 
