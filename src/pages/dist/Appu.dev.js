@@ -7,7 +7,8 @@ exports["default"] = void 0;
 
 var _react = require("react");
 
-function Appt() {}
+function Appu() {}
 
-var _default = Appt;
+;
+var _default = Appu;
 exports["default"] = _default;
