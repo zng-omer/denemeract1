@@ -3,15 +3,15 @@ import { NavLink ,Outlet } from "react-router-dom";
 function Layout () {
 
       return (
-            <div>
+            <div> 
                 <nav>
                   <ul> 
                       
                          <li>
-                        <NavLink style={({isActive})=>({color : isActive? "red" :"black"})} to="Appu">Appu</NavLink>
+                        <NavLink style={({isActive})=>({color : isActive? "red" :"white"})} to="Appu">Appu</NavLink>
                         </li>
-                        <li>
-                        <NavLink style={({isActive})=>({color : isActive? "red" :"black"})} to="Appo">Appo</NavLink>
+                        <li> 
+                        <NavLink style={({isActive})=>({color : isActive? "red" :"white"})} to="Appo">Appo</NavLink>
                         </li>
                   </ul> 
                 </nav>
